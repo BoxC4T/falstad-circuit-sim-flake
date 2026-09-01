@@ -25,9 +25,22 @@
 
         nativeBuildInputs = [
           pkgs.makeWrapper
+          pkgs.copyDesktopItems
         ];
 
         sourceRoot = "circuitjs1";
+
+        desktopItems = [
+          (pkgs.makeDesktopItem {
+            name = "circuitjs1";
+            desktopName = "Falsad Circuit Simulator";
+            exec = "circuitjs1";
+            icon = "circuitjs1";
+            categories = ["Education" "Science" "Electronics"];
+            comment = "Circuit simulator based on CircuitJS1";
+            terminal = false;
+          })
+        ];
 
         installPhase = ''
           runHook preInstall
@@ -59,13 +72,13 @@
             nspr
             nss
             pango
-            xorg.libX11
-            xorg.libXcomposite
-            xorg.libXdamage
-            xorg.libXext
-            xorg.libXfixes
-            xorg.libXrandr
-            xorg.libxcb
+            libX11
+            libXcomposite
+            libXdamage
+            libXext
+            libXfixes
+            libXrandr
+            libxcb
           ])}" \
             --add-flags "--no-sandbox"
 
