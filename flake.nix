@@ -20,7 +20,7 @@
 
         src = pkgs.fetchurl {
           url = "https://www.falstad.com/circuit/offline/circuitjs1-linux64.tgz";
-          hash = "sha256-oVH+LVSggGKtaIkVZK05Ctyf7euLTlsQzSOY6cfX3HE=";
+          hash = "sha256-Fj1UTGPcz13a5CfIDHAXzVyqXMQ+H6/08H4awJ8D9hQ=";
         };
 
         nativeBuildInputs = [
